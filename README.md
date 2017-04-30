@@ -9,5 +9,5 @@
 [cov-badge]: https://codecov.io/gh/phillyfan1138/TupleUtilities/branch/master/graph/badge.svg
 [cov-link]:  https://codecov.io/gh/phillyfan1138/TupleUtilities
 
-## Functional Utilities
-These utilies run in the futilities namespace and are header only.  To run the unit tests, `make` and `./test`
+## Tuple Utilities
+These utilies run in the tutilities namespace and are header only.  To run the unit tests, `make` and `./test`
