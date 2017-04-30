@@ -15,11 +15,11 @@ TEST_CASE("Test tuple_slice upper", "[Tuple]"){
     auto myExpected=std::make_tuple(3);
     REQUIRE(myResult==myExpected);
 }
-TEST_CASE("Test expand_tuple", "[Tuple]"){
+TEST_CASE("Test apply_tuple", "[Tuple]"){
     auto myFunc=[](const auto& x, const auto& y){
         return x*y;
     };
-    REQUIRE(tutilities::expand_tuple(myFunc, std::make_tuple(1, 2))==2);
+    REQUIRE(tutilities::apply_tuple(myFunc, std::make_tuple(1, 2))==2);
 }
 TEST_CASE("Test for_each", "[Tuple]"){
     auto myFunc=[](const auto& x, const auto& y){

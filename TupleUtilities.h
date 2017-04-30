@@ -14,7 +14,7 @@ namespace tutilities{
     }
     /**applies arguments to function*/
     template<typename F, typename Tuple>
-    decltype(auto) expand_tuple(F&& fn, Tuple&& t)
+    decltype(auto) apply_tuple(F&& fn, Tuple&& t)
     {
         std::size_t constexpr tSize
             = std::tuple_size<typename std::remove_reference<Tuple>::type>::value;
@@ -29,6 +29,7 @@ namespace tutilities{
             std::get<I + Ofst>(std::forward<Tuple>(t))...);
     }
     /**see http://stackoverflow.com/questions/8569567/get-part-of-stdtuple*/
+    /**splices tuple into sections.  Call using tuple_splice<firstindex, secondindex>(tuple).  Make sure that firstindex and secondindex are constexpr*/
     template <std::size_t I1, std::size_t I2, class Cont>
     constexpr auto tuple_slice(Cont&& t)  {
         static_assert(I2 >= I1, "invalid slice");
