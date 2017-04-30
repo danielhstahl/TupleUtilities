@@ -48,7 +48,7 @@ namespace tutilities{
         return std::make_tuple(f(std::get<Indices>(std::forward<Tuple>(tuple)), Indices, tuple_slice<0, Indices>(tuple), tuple_slice<Indices+1, std::tuple_size<std::remove_reference_t<Tuple>>::value>(tuple))...);
 
     }
-    /**iterates over a tuple with callback f(val, index, totalN)*/
+    /**iterates over a tuple with callback f(val, index, sequence from 0 to index-1, sequence from index+1 to end)*/
     template <typename Tuple, typename F>
     auto for_each(Tuple&& tuple, F&& f) {
         constexpr std::size_t N = std::tuple_size<std::remove_reference_t<Tuple>>::value;
