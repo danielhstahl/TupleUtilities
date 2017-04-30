@@ -1,5 +1,6 @@
 .vscode
 *.gcno
 *.gcda
+*.o
 test
 test.exe
