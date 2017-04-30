@@ -2,5 +2,6 @@
 *.gcno
 *.gcda
 *.o
+*.gcov
 test
 test.exe

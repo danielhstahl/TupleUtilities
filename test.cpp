@@ -14,7 +14,7 @@ TEST_CASE("Test tuple_slice upper", "[Tuple]"){
     auto myResult=tutilities::tuple_slice<2, 3>(myTuple);
     auto myExpected=std::make_tuple(3);
     REQUIRE(myResult==myExpected);
-}
+} 
 TEST_CASE("Test apply_tuple", "[Tuple]"){
     auto myFunc=[](const auto& x, const auto& y){
         return x*y;

@@ -1,7 +1,9 @@
+#ifndef TUTILITIES
+#define TUTILITIES
+
 #include <cstddef>
 #include <tuple>
 #include <utility>
-
 #include <type_traits>
 
 
@@ -57,3 +59,4 @@ namespace tutilities{
                     std::make_index_sequence<N>{});
     }
 }
+#endif
